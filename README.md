@@ -121,3 +121,54 @@ https://developer.microsoft.com/en-us/microsoft-edge/webview2
 ```
 npm run tauri dev
 ```
+
+
+## tauri 配置
+
+
+
+https://cloud.tencent.com/developer/article/2080044
+
+
+tauri.conf.json 文件中 windows 配置窗口信息
+
+`"decorations": false,` 去除边框
+
+`"title": "rescue-desktop-app",` 边框标题
+
+```
+"windows": [
+  {
+    "decorations": false,
+    "title": "rescue-desktop-app",
+    "width": 800,
+    "height": 600
+  }
+],
+```
+
+
+Cargo.toml 文件中 基本的 app 配置信息
+
+```
+[package]
+name = "rescue-desktop-app"
+version = "1.0.1"
+description = "航空搜救任务训练模拟系统-态势显控系统"
+authors = ["北京蓝天航空科技股份有限公司"]
+edition = "2021"
+```
+
+
+## 前端调用 tauri 代码
+
+
+参考资料
+- https://cloud.tencent.com/developer/article/2080038
+
+
+在线调试 rust 代码
+- https://play.rust-lang.org/?version=stable&mode=debug&edition=2021
+
+
+

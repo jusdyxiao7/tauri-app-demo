@@ -1,8 +1,8 @@
 [package]
-name = "tauri-app"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+name = "rescue-desktop-app"
+version = "1.0.1"
+description = "航空搜救任务训练模拟系统-态势显控系统"
+authors = ["北京蓝天航空科技股份有限公司"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -11,7 +11,7 @@ edition = "2021"
 tauri-build = { version = "1", features = [] }
 
 [dependencies]
-tauri = { version = "1", features = ["shell-open"] }
+tauri = { version = "1", features = [ "api-all", "system-tray"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 

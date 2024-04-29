@@ -6,31 +6,114 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "tauri-app",
+    "productName": "训练模拟系统",
     "version": "0.0.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": true,
+      "app": {
+        "all": true,
+        "show": true,
+        "hide": true
+      },
       "shell": {
-        "all": false,
+        "all": true,
         "open": true
+      },
+      "dialog": {
+        "all": true,
+        "open": true
+      },
+      "fs": {
+        "all": false,
+        "readFile": true,
+        "scope": ["*", "**", "**/**", "**/*"]
+      },
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": [
+          "http://**",
+          "https://**"
+        ]
+      },
+      "window": {
+        "all": true,
+        "create": true,
+        "center": true,
+        "requestUserAttention": true,
+        "setResizable": true,
+        "setTitle": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true,
+        "show": true,
+        "hide": true,
+        "close": true,
+        "setDecorations": true,
+        "setAlwaysOnTop": true,
+        "setContentProtected": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setPosition": true,
+        "setFullscreen": true,
+        "setFocus": true,
+        "setIcon": true,
+        "setSkipTaskbar": true,
+        "setCursorGrab": true,
+        "setCursorVisible": true,
+        "setCursorIcon": true,
+        "setCursorPosition": true,
+        "setIgnoreCursorEvents": true,
+        "startDragging": true,
+        "print": true
+      },
+      "protocol": {
+        "all": false,
+        "asset": true,
+        "assetScope": [
+          "$PICTURE"
+        ]
       }
     },
     "windows": [
       {
-        "title": "tauri-app",
+        "decorations": true,
+        "title": "rescue-desktop-app",
+        "fullscreen": true,
+        "resizable": false,
+        "center": false,
+        "maximized": false,
         "width": 800,
         "height": 600
       }
     ],
+    "systemTray": {
+      "iconPath": "icons/32x32.png",
+      "iconAsTemplate": true,
+      "title": "训练模拟系统",
+      "menuOnLeftClick": true
+    },
     "security": {
-      "csp": null
+      "csp": null,
+      "csp": "default-src 'self'; img-src 'self'; asset: https://asset.localhost"
     },
     "bundle": {
       "active": true,
       "targets": "all",
       "identifier": "com.tauri.prod",
+      "longDescription": "",
+      "windows": {
+        "certificateThumbprint": null,
+        "wix": {
+          "language": "zh-CN"
+        },
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      },
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
